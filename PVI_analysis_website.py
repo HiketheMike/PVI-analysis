@@ -18,7 +18,6 @@ st.write(f"You selected: **{selected_analysis_type}**")
 
 # Define the structured data for the revenue notes
 revenue_structure_data = {
-
     "Doanh thu từ hoạt động kinh doanh bảo hiểm": {
         "Phí bảo hiểm gốc": [
             "**Số liệu chính xác:** Doanh thu phí bảo hiểm gốc năm 2024 đạt 13.000 tỷ đồng.",
@@ -99,6 +98,31 @@ competitive_positioning_data = {
         ]
     }
 }
+financial_investment_strategy_data = {
+    "Chiến lược quản lí danh mục đâu tư": {
+        "Tuân thủ khẩu vị rủi ro và quy định pháp luật": [
+            "Chiến lược cốt lõi là duy trì cơ cấu danh mục đầu tư phù hợp với khẩu vị rủi ro đã được Hội đồng Quản trị (HĐQT) phê duyệt.",
+            "Mục tiêu của việc này là để đáp ứng các quy định của pháp luật về biên khả năng thanh toán và các yêu cầu kỹ thuật về an toàn vốn, nhằm duy trì và hướng tới nâng hạng tín nhiệm cho các công ty con."
+        ],
+        "Linh hoạt tái cấu trúc danh mục đầu tư": [
+            "Trong bối cảnh thị trường biến động, như lãi suất thấp trong năm 2024, PVI đã chủ động tái cấu trúc danh mục đầu tư. Cụ thể, trong năm 2024, PVI đã tăng đầu tư vào trái phiếu dài hạn và giảm đầu tư vào tiền gửi dài hạn.",
+            "PVIAM, đơn vị quản lý tài sản của hệ thống, đã kịp thời dịch chuyển cơ cấu tài sản, tối ưu hóa dòng tiền và sử dụng các công cụ, sản phẩm đầu tư linh hoạt để nâng cao hiệu quả."
+        ],
+        "Đa dạng hóa danh mục và tìm kiếm cơ hội mới": [
+            "PVI có chiến lược triển khai các sản phẩm đầu tư linh hoạt, đa dạng phù hợp với thị trường và khẩu vị rủi ro của công ty.",
+            "Trong năm 2025, PVIAM sẽ đa dạng và linh hoạt hơn trong công tác đầu tư để tối ưu hóa hiệu quả. PVIAM cũng có kế hoạch thành lập và vận hành các quỹ mở để phát huy thế mạnh về đầu tư các sản phẩm thu nhập cố định và mở rộng mạng lưới đối tác bên ngoài hệ thống."
+        ],
+        "Quản lý rủi ro chặt chẽ": [
+            "Hệ thống quản trị rủi ro của PVI được xây dựng theo mô hình ba tuyến để giám sát các loại rủi ro, bao gồm rủi ro thị trường (rủi ro giá cổ phiếu, rủi ro lãi suất).",
+            "Đối với rủi ro thị trường, PVI quản lý bằng cách xây dựng các quy định, chính sách đầu tư, đa dạng hóa danh mục và thiết lập các hạn mức đầu tư.",
+            "PVIAM, với vai trò là đơn vị quản lý quỹ, nhấn mạnh việc tăng cường theo dõi và giám sát trong và sau quá trình đầu tư để đảm bảo an toàn và minh bạch cho danh mục."
+        ],
+        "Đầu tư có trách nhiệm (ESG)": [
+            "PVI cam kết xem xét cẩn trọng các yếu tố liên quan đến môi trường và xã hội trước khi quyết định đầu tư.",
+            "Công ty đã khẳng định sẽ không đầu tư vào các doanh nghiệp có lĩnh vực kinh doanh hoặc hành động vi phạm nghiêm trọng đến môi trường. Danh mục đầu tư năm 2024 của PVI không bao gồm các doanh nghiệp khai thác khoáng sản hay các nhà máy điện sử dụng nhiên liệu hóa thạch."
+        ]
+    }
+}
 
 
 if selected_analysis_type == "Revenue Structure":
@@ -126,6 +150,7 @@ elif selected_analysis_type == "Cost structure":
     st.info("Content for Cost Structure will go here.")
 
 elif selected_analysis_type == "Competitive Positioning":
+
     main_category_options = list(competitive_positioning_data.keys())
     selected_main_category = st.sidebar.radio(
         "Select a competitive positioning aspect:",
@@ -135,6 +160,27 @@ elif selected_analysis_type == "Competitive Positioning":
     if selected_main_category:
         st.subheader(selected_main_category)
         subcategories = competitive_positioning_data[selected_main_category]
+
+        for sub_cat, items in subcategories.items():
+            with st.expander(f"**{sub_cat}**"):
+                if items:
+                    for item in items:
+                        st.markdown(f"{item}")
+                else:
+                    st.markdown("*(No further details available for this subcategory.)*")
+
+elif selected_analysis_type == "Financial investment strategy":
+    st.write("### Financial Investment Strategy Details")
+
+    main_category_options = list(financial_investment_strategy_data.keys())
+    selected_main_category = st.sidebar.radio(
+        "Select a financial investment strategy aspect:",
+        main_category_options
+    )
+
+    if selected_main_category:
+        st.subheader(selected_main_category)
+        subcategories = financial_investment_strategy_data[selected_main_category]
 
         for sub_cat, items in subcategories.items():
             with st.expander(f"**{sub_cat}**"):
