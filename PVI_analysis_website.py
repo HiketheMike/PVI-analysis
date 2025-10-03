@@ -126,8 +126,6 @@ elif selected_analysis_type == "Cost structure":
     st.info("Content for Cost Structure will go here.")
 
 elif selected_analysis_type == "Competitive Positioning":
-    st.write("### Competitive Positioning Details")
-
     main_category_options = list(competitive_positioning_data.keys())
     selected_main_category = st.sidebar.radio(
         "Select a competitive positioning aspect:",
