@@ -165,6 +165,7 @@ if selected_option == "Revenue structure":
         pdf_bytes = f.read()
 
 
+
 elif selected_option == "Cost structure":
     st.info("Generate a mindmap for Cost Structure here.")
     # Add your mindmap generation code
