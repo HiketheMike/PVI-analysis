@@ -11,7 +11,7 @@ st.sidebar.header("Analysis Options")
 # Dropdown list for main analysis type
 selected_analysis_type = st.sidebar.selectbox(
     "Select a structure to analyze:",
-    ("Company Revenue Structure", "Cost structure")
+    ("Revenue Structure", "Cost structure")
 )
 
 st.write(f"You selected: **{selected_analysis_type}**")
