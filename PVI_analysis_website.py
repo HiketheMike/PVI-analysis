@@ -16,8 +16,6 @@ selected_analysis_type = st.sidebar.selectbox(
 
 st.write(f"You selected: **{selected_analysis_type}**")
 
-st.subheader("Content Display Area") # Changed subheader
-
 # Define the structured data for the revenue notes
 revenue_structure_data = {
     "Doanh thu kinh doanh phi bảo hiểm và các hoạt động khác": {
