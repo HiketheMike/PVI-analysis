@@ -240,7 +240,6 @@ elif selected_analysis_type == "Financial investment strategy":
                     st.markdown("*(No further details available for this subcategory.)*")
 
 elif selected_analysis_type == "General Information":
-    st.write("### General Information Details")
 
     main_category_options = list(general_information_data.keys())
     selected_main_category = st.sidebar.radio(
