@@ -30,7 +30,7 @@ revenue_structure_data = {
         ],
         "Phí nhận tái bảo hiểm": [
             "**Thành tích và Số liệu Kinh doanh của Tái Bảo Hiểm (Năm 2024):**",
-            "- Doanh thu kỷ lục: Tổng doanh thu của Hanoi Re đạt 3.017,3 tỷ đồng, hoàn thành 106,6% kế hoạch năm.",
+            "Doanh thu kỷ lục: Tổng doanh thu của Hanoi Re đạt 3.017,3 tỷ đồng, hoàn thành 106,6% kế hoạch năm.",
             "- Lợi nhuận: Lợi nhuận trước thuế 240 tỷ đồng, lợi nhuận sau thuế 190 tỷ đồng.",
             "- Hiệu quả đầu tư tài chính: Tối ưu hóa dòng tiền và nắm bắt cơ hội thị trường.",
             "- Xếp hạng tín nhiệm quốc tế: A.M. Best điều chỉnh triển vọng nâng hạng năng lực tín dụng dài hạn từ 'ổn định' lên 'tích cực', duy trì xếp hạng năng lực tài chính B++ (Tốt).",
@@ -72,7 +72,15 @@ if selected_analysis_type == "Revenue Structure":
     if selected_main_category:
         st.subheader(selected_main_category)
         subcategories = revenue_structure_data[selected_main_category]
-
+        # ...existing code...
+        for sub_cat, items in subcategories.items():
+            with st.expander(f"**{sub_cat}**"):
+                if items:
+                    for item in items:
+                        st.markdown(f"{item}") # Removed the prepended hyphen
+                else:
+                    st.markdown("*(No further details available for this subcategory.)*")
+                    
         for sub_cat, items in subcategories.items():
             with st.expander(f"**{sub_cat}**"):
                 if items:
