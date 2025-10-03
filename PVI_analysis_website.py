@@ -124,6 +124,55 @@ financial_investment_strategy_data = {
     }
 }
 
+general_information_data = {
+    "Tổng quan về Công ty Cổ phần PVI": {
+        "Lịch sử và Vị thế": [
+            "Công ty Cổ phần PVI, có tiền thân là Công ty Bảo hiểm Dầu khí, được thành lập năm 1996.",
+            "Trải qua gần 30 năm phát triển, PVI đã khẳng định vị thế là một định chế Tài chính - Bảo hiểm vững mạnh, uy tín và chuyên nghiệp.",
+            "Tầm nhìn của công ty là trở thành một định chế tài chính - bảo hiểm có thương hiệu quốc tế, phát triển bền vững dựa trên nền tảng tri thức và công nghệ."
+        ],
+        "Mô hình hoạt động và Cổ đông": [
+            "PVI hoạt động theo mô hình công ty mẹ - công ty con từ năm 2011.",
+            "Công ty có các cổ đông lớn là Tập đoàn Dầu khí Quốc gia Việt Nam (PVN) và HDI Global SE (thuộc tập đoàn Talanx của Đức).",
+            "Cổ phiếu của PVI có mã là PVI, được niêm yết trên Sở Giao dịch Chứng khoán Hà Nội (HNX)."
+        ],
+        "Lĩnh vực kinh doanh và Mục tiêu": [
+            "Lĩnh vực kinh doanh chính của PVI và các công ty con bao gồm kinh doanh bảo hiểm và tái bảo hiểm, hoạt động dịch vụ tài chính, kinh doanh bất động sản, và các dịch vụ công nghệ thông tin.",
+            "Công ty đặt mục tiêu phát triển cân đối và đồng bộ ba trụ cột kinh doanh chính là bảo hiểm phi nhân thọ, tái bảo hiểm và quản lý quỹ.",
+            "PVI được ghi nhận là doanh nghiệp bảo hiểm phi nhân thọ số 1 trên thị trường Việt Nam về nhiều phương diện như vốn điều lệ, thị phần và hiệu quả nghiệp vụ."
+        ]
+    },
+    "Thị trường hoạt động": {
+        "Thị trường trong nước": [
+            "Hoạt động trên toàn quốc."
+        ],
+        "Thị trường quốc tế": [
+            "Hoạt động tại các thị trường chính bao gồm Singapore, Trung Quốc, Hồng Kông, Đài Loan, Ấn Độ, Malaysia và các thị trường khác.",
+            "Công ty cũng tích cực mở rộng hoạt động khai thác tái bảo hiểm tại thị trường nước ngoài."
+        ]
+    },
+    "Các công ty con": {
+        "Tổng Công ty Bảo hiểm PVI (PVI Insurance)": [
+            "Lĩnh vực hoạt động: Bảo hiểm và Tái bảo hiểm.",
+            "Tỷ lệ sở hữu của PVI: 100%.",
+            "Đây là đơn vị kinh doanh lõi của hệ thống PVI."
+        ],
+        "Tổng Công ty Cổ phần Tái bảo hiểm Hà Nội (Hanoi Re)": [
+            "Lĩnh vực hoạt động: Tái bảo hiểm.",
+            "Tỷ lệ sở hữu của PVI: 81,09%.",
+            "Mã cổ phiếu của Hanoi Re là PRE (HNX)."
+        ],
+        "Công ty Cổ phần Quản lý Quỹ PVI (PVIAM)": [
+            "Lĩnh vực hoạt động: Quản lý quỹ đầu tư chứng khoán, quản lý danh mục đầu tư và tư vấn đầu tư.",
+            "Tỷ lệ sở hữu của PVI: 61,96%."
+        ],
+        "Các quỹ đầu tư hợp nhất": [
+            "Ngoài ra, PVI cũng hợp nhất báo cáo tài chính của hai quỹ đầu tư do PVIAM quản lý và được góp vốn bởi PVI cùng các công ty con của PVI:",
+            "- Quỹ Đầu tư Cơ hội PVI (POF)",
+            "- Quỹ Đầu tư Hạ tầng PVI (PIF)"
+        ]
+    }
+}
 
 if selected_analysis_type == "Revenue Structure":
 
@@ -181,6 +230,27 @@ elif selected_analysis_type == "Financial investment strategy":
     if selected_main_category:
         st.subheader(selected_main_category)
         subcategories = financial_investment_strategy_data[selected_main_category]
+
+        for sub_cat, items in subcategories.items():
+            with st.expander(f"**{sub_cat}**"):
+                if items:
+                    for item in items:
+                        st.markdown(f"{item}")
+                else:
+                    st.markdown("*(No further details available for this subcategory.)*")
+
+elif selected_analysis_type == "General information":
+    st.write("### General Information Details")
+
+    main_category_options = list(general_information_data.keys())
+    selected_main_category = st.sidebar.radio(
+        "Select a general information aspect:",
+        main_category_options
+    )
+
+    if selected_main_category:
+        st.subheader(selected_main_category)
+        subcategories = general_information_data[selected_main_category]
 
         for sub_cat, items in subcategories.items():
             with st.expander(f"**{sub_cat}**"):
