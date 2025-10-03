@@ -164,7 +164,16 @@ if selected_option == "Revenue structure":
     with open(pdf_filename, "rb") as f:
         pdf_bytes = f.read()
 
-
+    # Provide a download button
+    st.download_button(
+        label="Download Mindmap as PDF",
+        data=pdf_bytes,
+        file_name="Revenue_Structure_Mindmap.pdf",
+        mime="application/pdf"
+    )
+    
+    # Clean up the temporary PDF file after download button is rendered
+    os.remove(pdf_filename)
 
 elif selected_option == "Cost structure":
     st.info("Generate a mindmap for Cost Structure here.")
