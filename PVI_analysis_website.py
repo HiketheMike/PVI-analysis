@@ -1,5 +1,7 @@
 import streamlit as st
 import graphviz # Import the graphviz library
+import tempfile # For creating temporary files
+import os # For file operations
 
 st.set_page_config(layout="wide")
 
@@ -21,6 +23,7 @@ st.subheader("Mindmap Display Area")
 def generate_revenue_mindmap_dot():
     """
     Generates a Graphviz DOT string for the Company Revenue Structure mindmap.
+    Returns a graphviz.Graph object.
     """
     dot = graphviz.Graph(comment='Company Revenue Structure Mindmap', 
                          graph_attr={
@@ -138,14 +141,40 @@ def generate_revenue_mindmap_dot():
     dot.edge('financial_activities', 'exchange_rate_profit', color='#FFD700', penwidth='2')
     dot.edge('financial_activities', 'stock_trading_profit', color='#FFD700', penwidth='2')
 
-    return dot.source
+    return dot
 
 # Placeholder for mindmap generation logic
 if selected_option == "Revenue structure":
     st.info("Generating mindmap for Revenue Structure...")
-    # Generate the DOT string and render it using Streamlit's graphviz component
-    graph_dot_string = generate_revenue_mindmap_dot()
-    st.graphviz_chart(graph_dot_string)
+    
+    # Get the graphviz.Graph object
+    graph_object = generate_revenue_mindmap_dot()
+
+    # Render the graph in Streamlit
+    st.graphviz_chart(graph_object.source)
+
+    # --- PDF Download functionality ---
+    # Create a temporary file for PDF output
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_pdf:
+        pdf_filename = tmp_pdf.name
+        # Render the graph to PDF
+        graph_object.render(filename=pdf_filename, format='pdf', cleanup=True) # cleanup=True removes the .dot file
+
+    # Read the PDF content
+    with open(pdf_filename, "rb") as f:
+        pdf_bytes = f.read()
+
+    # Provide a download button
+    st.download_button(
+        label="Download Mindmap as PDF",
+        data=pdf_bytes,
+        file_name="Revenue_Structure_Mindmap.pdf",
+        mime="application/pdf"
+    )
+    
+    # Clean up the temporary PDF file after download button is rendered
+    os.remove(pdf_filename)
+
 elif selected_option == "Cost structure":
     st.info("Generate a mindmap for Cost Structure here.")
-    # Add your mindmap generation code for
+    # Add your mindmap generation code
