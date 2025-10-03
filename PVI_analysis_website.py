@@ -11,7 +11,7 @@ st.sidebar.header("Analysis Options")
 # Dropdown list for main analysis type
 selected_analysis_type = st.sidebar.selectbox(
     "Select a structure to analyze:",
-    ("Revenue Structure", "Cost structure")
+    ("Revenue Structure", "Cost structure", "Competitive Positioning")
 )
 
 st.write(f"You selected: **{selected_analysis_type}**")
@@ -59,6 +59,50 @@ revenue_structure_data = {
         "Lãi kinh doanh cổ phiếu": []
     }
 }
+competitive_positioning_data = {
+    "Đa Dạng Hóa và Phát Triển Các Kênh Phân Phối Mới": {
+        "Tổng quan": [
+            "PVI không ngừng tập trung phát triển các kênh phân phối mới để mở rộng mạng lưới bán hàng.",
+            "Một điểm sáng nổi bật là việc hợp tác với hai tổ chức lớn là Bảo hiểm xã hội Việt Nam và Hội Nông dân tại các địa phương để triển khai thu hộ BHXH, BHYT tự nguyện.",
+            "Chỉ sau hơn 2 năm tham gia, Bảo hiểm PVI đã vươn lên vị trí thứ 2 trong số gần 600 tổ chức dịch vụ thu hộ BHXH, cho thấy năng lực vượt trội trong việc triển khai và vận hành các kênh phân phối mới, tiếp cận sâu rộng đến các phân khúc khách hàng đa dạng."
+        ]
+    },
+    "Đầu Tư Mạnh Mẽ vào Công Nghệ Thông Tin để Hỗ Trợ Phân Phối": {
+        "Tổng quan": [
+            "Trung tâm CNTT của PVI đóng vai trò quan trọng trong việc thúc đẩy chuyển đổi số, hỗ trợ hiệu quả kinh doanh và quản trị.",
+            "Công ty tập trung triển khai các ứng dụng phần mềm cho kênh thương mại điện tử, nghiên cứu ứng dụng AI và tối ưu hóa các hoạt động giám định, bồi thường, tạo ra trải nghiệm tốt hơn cho khách hàng qua các kênh số."
+        ]
+    },
+        "Tiên Phong và Dẫn Đầu Kênh Thương Mại Điện Tử": {
+        "Tổng quan": [
+            "Bảo hiểm PVI đã triển khai mạnh mẽ kênh thương mại điện tử, đạt doanh thu gần 800 tỷ đồng trong năm 2024, tăng trưởng 50%.",
+            "Công ty đã đầu tư và ứng dụng công nghệ số, kết nối API với 30 đối tác, sàn điện tử lớn như Vietnam Airlines, Mobifone, Viettel, Thegioididong, Sendo, Shopee.... Việc hợp tác sâu rộng với các hệ sinh thái lớn này tạo ra một kênh phân phối hiện đại, tiếp cận được lượng khách hàng khổng lồ mà các kênh truyền thống khó có được."
+        ]
+    },    
+    "Sức Mạnh Cạnh Tranh Trong Việc Tạo Doanh Thu": {
+        "Khai Thác Tái Bảo Hiểm Quốc Tế Nhờ Xếp Hạng Tín Nhiệm Vượt Trội": [
+            "Bảo hiểm PVI là doanh nghiệp bảo hiểm duy nhất tại Việt Nam duy trì được xếp hạng năng lực tài chính A- (Xuất sắc) từ A.M. Best.",
+            "Lợi thế này cho phép PVI đẩy mạnh hoạt động khai thác nhận tái bảo hiểm từ thị trường quốc tế, một nguồn doanh thu quan trọng mà không nhiều đối thủ trong nước có thể cạnh tranh được. Đây là yếu tố chính giúp doanh thu hoạt động bảo hiểm tăng trưởng 39% trong năm 2024."
+        ],
+        "Tăng Trưởng Doanh Thu Bảo Hiểm Gốc Vượt Trội So Với Thị Trường": [
+            "Doanh thu bảo hiểm gốc của PVI cán mốc 13.000 tỷ đồng, với mức tăng trưởng gấp gần 2 lần so với mức tăng trưởng chung của thị trường bảo hiểm phi nhân thọ.",
+            "Sự tăng trưởng ấn tượng này cho thấy PVI không chỉ duy trì thị phần mà còn đang chiếm lĩnh thị phần từ các đối thủ, khẳng định sức mạnh và uy tín thương hiệu trong việc thu hút khách hàng."
+        ],
+        "Mô Hình Kinh Doanh Đa Trụ Cột, Đảm Bảo Doanh Thu Bền Vững": [
+            "PVI phát triển cân đối dựa trên ba trụ cột chính: bảo hiểm phi nhân thọ, tái bảo hiểm, và quản lý quỹ.",
+            "Mô hình này tạo ra sự ổn định về doanh thu. Ngay cả khi mảng bảo hiểm bị ảnh hưởng nặng nề bởi siêu bão Yagi, thì doanh thu từ hoạt động tài chính, cho thuê văn phòng và các hoạt động khác vẫn đạt 1.647 tỷ đồng, hoàn thành 126% kế hoạch.",
+            "Trung tâm Quản lý và Kinh doanh Dịch vụ (vận hành Tòa nhà PVI) cũng đóng góp một nguồn doanh thu ổn định và hiệu quả, với tỷ lệ lấp đầy bình quân trên 100% kế hoạch."
+        ],
+        "Năng Lực Tài Chính Vững Mạnh Hỗ Trợ Mở Rộng Kinh Doanh": [
+            "Với việc tăng vốn điều lệ lên 3.900 tỷ đồng, Bảo hiểm PVI là doanh nghiệp bảo hiểm phi nhân thọ có quy mô vốn lớn nhất thị trường.",
+            "Năng lực tài chính dồi dào là nền tảng để công ty mở rộng hoạt động kinh doanh, chấp nhận các hợp đồng bảo hiểm lớn và tăng cường khai thác thị trường quốc tế, từ đó tạo ra doanh thu lớn hơn."
+        ],
+        "Hậu Thuẫn Mạnh Mẽ từ Cổ Đông Lớn": [
+            "PVI nhận được sự hỗ trợ mạnh mẽ từ các cổ đông chiến lược là Tập đoàn Dầu khí Quốc gia Việt Nam (PVN) và HDI Global SE (thuộc tập đoàn Talanx của Đức). Sự kết hợp này mang lại lợi thế kép: nguồn khách hàng lớn, ổn định từ ngành dầu khí và kinh nghiệm, mạng lưới quốc tế từ tập đoàn bảo hiểm hàng đầu châu Âu."
+        ]
+    }
+}
+
 
 if selected_analysis_type == "Revenue Structure":
 
@@ -80,15 +124,27 @@ if selected_analysis_type == "Revenue Structure":
                         st.markdown(f"{item}") # Removed the prepended hyphen
                 else:
                     st.markdown("*(No further details available for this subcategory.)*")
-                    
+
+elif selected_analysis_type == "Cost structure":
+    st.info("Content for Cost Structure will go here.")
+
+elif selected_analysis_type == "Competitive Positioning":
+    st.write("### Competitive Positioning Details")
+
+    main_category_options = list(competitive_positioning_data.keys())
+    selected_main_category = st.sidebar.radio(
+        "Select a competitive positioning aspect:",
+        main_category_options
+    )
+
+    if selected_main_category:
+        st.subheader(selected_main_category)
+        subcategories = competitive_positioning_data[selected_main_category]
+
         for sub_cat, items in subcategories.items():
             with st.expander(f"**{sub_cat}**"):
                 if items:
                     for item in items:
-                        st.markdown(f"- {item}")
+                        st.markdown(f"{item}")
                 else:
                     st.markdown("*(No further details available for this subcategory.)*")
-
-elif selected_analysis_type == "Cost structure":
-    st.info("Content for Cost Structure will go here.")
-    # Add your notes for Cost
