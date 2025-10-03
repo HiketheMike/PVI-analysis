@@ -60,25 +60,27 @@ revenue_structure_data = {
     }
 }
 competitive_positioning_data = {
-    "Đa Dạng Hóa và Phát Triển Các Kênh Phân Phối Mới": {
-        "Tổng quan": [
-            "PVI không ngừng tập trung phát triển các kênh phân phối mới để mở rộng mạng lưới bán hàng.",
-            "Một điểm sáng nổi bật là việc hợp tác với hai tổ chức lớn là Bảo hiểm xã hội Việt Nam và Hội Nông dân tại các địa phương để triển khai thu hộ BHXH, BHYT tự nguyện.",
-            "Chỉ sau hơn 2 năm tham gia, Bảo hiểm PVI đã vươn lên vị trí thứ 2 trong số gần 600 tổ chức dịch vụ thu hộ BHXH, cho thấy năng lực vượt trội trong việc triển khai và vận hành các kênh phân phối mới, tiếp cận sâu rộng đến các phân khúc khách hàng đa dạng."
-        ]
-    },
-    "Đầu Tư Mạnh Mẽ vào Công Nghệ Thông Tin để Hỗ Trợ Phân Phối": {
-        "Tổng quan": [
-            "Trung tâm CNTT của PVI đóng vai trò quan trọng trong việc thúc đẩy chuyển đổi số, hỗ trợ hiệu quả kinh doanh và quản trị.",
-            "Công ty tập trung triển khai các ứng dụng phần mềm cho kênh thương mại điện tử, nghiên cứu ứng dụng AI và tối ưu hóa các hoạt động giám định, bồi thường, tạo ra trải nghiệm tốt hơn cho khách hàng qua các kênh số."
-        ]
-    },
+    "Sức Mạnh Cạnh Tranh Trong Kênh Phân Phối": {
+        "Đa Dạng Hóa và Phát Triển Các Kênh Phân Phối Mới": {
+            "Tổng quan": [
+                "PVI không ngừng tập trung phát triển các kênh phân phối mới để mở rộng mạng lưới bán hàng.",
+                "Một điểm sáng nổi bật là việc hợp tác với hai tổ chức lớn là Bảo hiểm xã hội Việt Nam và Hội Nông dân tại các địa phương để triển khai thu hộ BHXH, BHYT tự nguyện.",
+                "Chỉ sau hơn 2 năm tham gia, Bảo hiểm PVI đã vươn lên vị trí thứ 2 trong số gần 600 tổ chức dịch vụ thu hộ BHXH, cho thấy năng lực vượt trội trong việc triển khai và vận hành các kênh phân phối mới, tiếp cận sâu rộng đến các phân khúc khách hàng đa dạng."
+            ]
+        },
+        "Đầu Tư Mạnh Mẽ vào Công Nghệ Thông Tin để Hỗ Trợ Phân Phối": {
+            "Tổng quan": [
+                "Trung tâm CNTT của PVI đóng vai trò quan trọng trong việc thúc đẩy chuyển đổi số, hỗ trợ hiệu quả kinh doanh và quản trị.",
+                "Công ty tập trung triển khai các ứng dụng phần mềm cho kênh thương mại điện tử, nghiên cứu ứng dụng AI và tối ưu hóa các hoạt động giám định, bồi thường, tạo ra trải nghiệm tốt hơn cho khách hàng qua các kênh số."
+            ]
+        },
         "Tiên Phong và Dẫn Đầu Kênh Thương Mại Điện Tử": {
-        "Tổng quan": [
-            "Bảo hiểm PVI đã triển khai mạnh mẽ kênh thương mại điện tử, đạt doanh thu gần 800 tỷ đồng trong năm 2024, tăng trưởng 50%.",
-            "Công ty đã đầu tư và ứng dụng công nghệ số, kết nối API với 30 đối tác, sàn điện tử lớn như Vietnam Airlines, Mobifone, Viettel, Thegioididong, Sendo, Shopee.... Việc hợp tác sâu rộng với các hệ sinh thái lớn này tạo ra một kênh phân phối hiện đại, tiếp cận được lượng khách hàng khổng lồ mà các kênh truyền thống khó có được."
-        ]
-    },    
+            "Tổng quan": [
+                "Bảo hiểm PVI đã triển khai mạnh mẽ kênh thương mại điện tử, đạt doanh thu gần 800 tỷ đồng trong năm 2024, tăng trưởng 50%.",
+                "Công ty đã đầu tư và ứng dụng công nghệ số, kết nối API với 30 đối tác, sàn điện tử lớn như Vietnam Airlines, Mobifone, Viettel, Thegioididong, Sendo, Shopee.... Việc hợp tác sâu rộng với các hệ sinh thái lớn này tạo ra một kênh phân phối hiện đại, tiếp cận được lượng khách hàng khổng lồ mà các kênh truyền thống khó có được."
+            ]
+        }
+    },  
     "Sức Mạnh Cạnh Tranh Trong Việc Tạo Doanh Thu": {
         "Khai Thác Tái Bảo Hiểm Quốc Tế Nhờ Xếp Hạng Tín Nhiệm Vượt Trội": [
             "Bảo hiểm PVI là doanh nghiệp bảo hiểm duy nhất tại Việt Nam duy trì được xếp hạng năng lực tài chính A- (Xuất sắc) từ A.M. Best.",
