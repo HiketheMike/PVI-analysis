@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVI Holdings: Resilience in the Eye of the Storm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 40vh;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .flowchart-arrow {
+            color: #00A8E8;
+            font-size: 2.5rem;
+            line-height: 1;
+            margin: 0 1rem;
+        }
+        .kpi-box {
+            background-color: #ffffff;
+            border-left: 5px solid #00A8E8;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    
+    <div class="min-h-screen" style="background-color: #003459;">
+        <div class="container mx-auto px-4 py-12 text-white text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" style="color: #FFFFFF;">Riding the Storm</h1>
+            <p class="text-lg md:text-2xl font-light max-w-4xl mx-auto" style="color: #90DDF0;">How PVI Holdings Dominates Vietnam's Insurance Market Through Unmatched Financial Resilience</p>
+        </div>
+    </div>
+
+    
+    <div class="container mx-auto px-4 py-12 -mt-24">
+        
+        
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4" style="color: #003459;">The Challenge: A Market Under Threat</h2>
+                    <p class="text-gray-600 mb-6">Vietnam's vibrant non-life insurance sector is one of the fastest-growing in Southeast Asia. However, its extensive coastline makes it highly vulnerable to catastrophic weather events. Major typhoons represent "black swan" events that test the financial bedrock of even the largest insurers, making rapid recovery and financial stability paramount for market leadership.</p>
+                </div>
+                <div class="text-center p-8 rounded-lg" style="background-color: #007EA7;">
+                    <p class="text-white text-xl font-medium">Historic Catastrophe Claims</p>
+                    <p class="text-white text-5xl md:text-6xl font-extrabold my-2">> 4 Trillion VND</p>
+                    <p class="text-white text-lg">Total estimated claims from a single major event like Typhoon Yagi, putting immense pressure on the entire industry.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-center mb-2" style="color: #003459;">Vietnam Non-Life Insurance Market Share (H1 2025)</h2>
+                <p class="text-center text-gray-500 mb-6">PVI Holdings stands as the undisputed market leader, commanding a significant share over its nearest competitors.</p>
+                <div class="chart-container">
+                    <canvas id="marketShareChart"></canvas>
+                </div>
+            </div>
+
+            
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-center mb-2" style="color: #003459;">Typhoon Yagi Claims by Insurer (2024)</h2>
+                <p class="text-center text-gray-500 mb-6">The scale of a major catastrophe disproportionately impacts the market leader. PVI faced claims more than triple those of its closest competitor.</p>
+                 <div class="chart-container" style="height: 350px;">
+                    <canvas id="claimsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center mb-4" style="color: #003459;">The PVI Difference: A Blueprint for Rapid Recovery</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">PVI's resilience isn't accidental. It's the result of a proactive, three-stage strategy combined with formidable financial strength, enabling them to absorb shocks and accelerate compensation when clients need it most.</p>
+            
+            <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-4 mb-10">
+                <div class="flowchart-step">
+                    <div class="rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold text-white" style="background-color: #00A8E8;">1</div>
+                    <h3 class="font-bold text-lg mt-4" style="color: #003459;">Pre-emptive Mobilization</h3>
+                    <p class="text-gray-500 text-sm">Teams are deployed to high-risk areas during the event, not after, enabling immediate on-the-ground support and damage assessment.</p>
+                </div>
+                <div class="flowchart-arrow hidden md:block">➔</div>
+                 <div class="flowchart-arrow md:hidden text-3xl">⬇</div>
+                <div class="flowchart-step">
+                    <div class="rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold text-white" style="background-color: #00A8E8;">2</div>
+                    <h3 class="font-bold text-lg mt-4" style="color: #003459;">24/7 Rapid Assessment</h3>
+                    <p class="text-gray-500 text-sm">Specialized, round-the-clock teams process loss reports instantly, dramatically reducing waiting times for policyholders.</p>
+                </div>
+                 <div class="flowchart-arrow hidden md:block">➔</div>
+                 <div class="flowchart-arrow md:hidden text-3xl">⬇</div>
+                <div class="flowchart-step">
+                    <div class="rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold text-white" style="background-color: #00A8E8;">3</div>
+                    <h3 class="font-bold text-lg mt-4" style="color: #003459;">Accelerated Compensation</h3>
+                    <p class="text-gray-500 text-sm">PVI initiates advance payments to policyholders, providing crucial liquidity for recovery long before final settlements are complete.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="p-6 rounded-lg shadow-inner kpi-box">
+                     <p class="text-xl font-medium" style="color: #007EA7;">Financial Fortress</p>
+                    <p class="text-4xl md:text-5xl font-extrabold my-2" style="color: #003459;">15.9 Trillion VND</p>
+                    <p class="text-gray-600">In financial provisions held before the storm, creating a massive buffer to absorb catastrophic losses without financial strain.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-inner kpi-box">
+                     <p class="text-xl font-medium" style="color: #007EA7;">Profit Protection</p>
+                    <p class="text-4xl md:text-5xl font-extrabold my-2" style="color: #003459;">-5.6%</p>
+                    <p class="text-gray-600">The minimal impact on Pre-Tax Profit in the 9 months including Typhoon Yagi, despite facing historic claims.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10">
+             <h2 class="text-3xl font-bold text-center mb-4" style="color: #003459;">The Proof: Resilience Under Pressure</h2>
+             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">While competitors weathered the storm, PVI thrived. Their operational excellence allowed them to continue aggressive revenue growth while protecting profitability, a feat that demonstrates true market leadership.</p>
+             <div class="chart-container" style="height: 400px; max-height: 500px;">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="mt-12 py-8" style="background-color: #00171F;">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p class="font-bold text-lg mb-2" style="color: #90DDF0;">PVI Holdings: Leading with Strength and Speed.</p>
+            <p class="text-sm">This analysis is based on publicly available financial reports and news articles from 2024 and 2025.</p>
+        </div>
+    </footer>
+
+
+<script>
+    const brilliantBlues = {
+        primary: '#003459',
+        secondary: '#007EA7',
+        accent: '#00A8E8',
+        light: '#90DDF0',
+        white: '#FFFFFF',
+        gray: '#6B7280'
+    };
+    
+    const wrapLabel = (label) => {
+        const maxLength = 16;
+        if (label.length <= maxLength) {
+            return label;
+        }
+        const words = label.split(' ');
+        const lines = [];
+        let currentLine = '';
+        for (const word of words) {
+            if ((currentLine + ' ' + word).trim().length > maxLength) {
+                lines.push(currentLine.trim());
+                currentLine = word;
+            } else {
+                currentLine = (currentLine + ' ' + word).trim();
+            }
+        }
+        if (currentLine) {
+            lines.push(currentLine.trim());
+        }
+        return lines;
+    };
+    
+    const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+            return label.join(' ');
+        } else {
+            return label;
+        }
+    };
+
+    
+    const marketShareCtx = document.getElementById('marketShareChart').getContext('2d');
+    new Chart(marketShareCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['PVI Holdings', 'Bao Viet', 'Bao Minh', 'Others'],
+            datasets: [{
+                label: 'Market Share %',
+                data: [18.4, 12.0, 7.0, 62.6],
+                backgroundColor: [
+                    brilliantBlues.primary,
+                    brilliantBlues.secondary,
+                    brilliantBlues.accent,
+                    brilliantBlues.light,
+                ],
+                borderColor: brilliantBlues.white,
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: brilliantBlues.gray,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            cutout: '60%'
+        }
+    });
+
+    
+    const claimsCtx = document.getElementById('claimsChart').getContext('2d');
+    new Chart(claimsCtx, {
+        type: 'bar',
+        data: {
+            labels: ['PVI Holdings', 'Bao Viet', wrapLabel('Military Ins. Corp'), wrapLabel('BIDV Ins.')],
+            datasets: [{
+                label: 'Claims Value (Billion VND)',
+                data: [3000, 955, 230, 200],
+                backgroundColor: [
+                    brilliantBlues.primary,
+                    brilliantBlues.secondary,
+                    brilliantBlues.accent,
+                    brilliantBlues.light
+                ],
+                borderRadius: 5
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                     callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Claims Value (Billion VND)',
+                        color: brilliantBlues.gray
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                     grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+    
+    const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+    new Chart(performanceCtx, {
+        type: 'bar',
+        data: {
+            labels: ['9 Months 2023', '9 Months 2024 (Post-Typhoon)'],
+            datasets: [
+                {
+                    type: 'bar',
+                    label: 'Consolidated Revenue (Billion VND)',
+                    data: [11864, 16728],
+                    backgroundColor: brilliantBlues.secondary,
+                    yAxisID: 'y',
+                    borderRadius: 5
+                },
+                {
+                    type: 'line',
+                    label: 'Consolidated Pre-Tax Profit (Billion VND)',
+                    data: [1039, 981],
+                    backgroundColor: brilliantBlues.primary,
+                    borderColor: brilliantBlues.primary,
+                    yAxisID: 'y1',
+                    tension: 0.1,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                },
+                tooltip: {
+                     callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    mode: 'index',
+                    intersect: false
+                }
+            },
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Revenue (Billion VND)',
+                        color: brilliantBlues.secondary
+                    },
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Profit (Billion VND)',
+                        color: brilliantBlues.primary
+                    },
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                },
+                 x: {
+                     grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>
