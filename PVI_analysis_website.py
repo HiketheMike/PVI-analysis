@@ -3,7 +3,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-st.title("Notes Generator") # Changed title
+st.title("PVI Analysis") # Changed title
 
 # Left-hand sidebar panel
 st.sidebar.header("Analysis Options")
