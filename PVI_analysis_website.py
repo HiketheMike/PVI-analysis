@@ -11,7 +11,7 @@ st.sidebar.header("Analysis Options")
 # Dropdown list for main analysis type
 selected_analysis_type = st.sidebar.selectbox(
     "Select a structure to analyze:",
-    ("Revenue Structure", "Cost structure", "Competitive Positioning", "Financial investment strategy")
+    ("General Information", "Revenue Structure", "Cost structure", "Competitive Positioning", "Financial investment strategy")
 )
 
 st.write(f"You selected: **{selected_analysis_type}**")
@@ -239,7 +239,7 @@ elif selected_analysis_type == "Financial investment strategy":
                 else:
                     st.markdown("*(No further details available for this subcategory.)*")
 
-elif selected_analysis_type == "General information":
+elif selected_analysis_type == "General Information":
     st.write("### General Information Details")
 
     main_category_options = list(general_information_data.keys())
