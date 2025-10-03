@@ -145,7 +145,7 @@ if selected_option == "Revenue structure":
     st.info("Generating mindmap for Revenue Structure...")
     # Generate the DOT string and render it using Streamlit's graphviz component
     graph_dot_string = generate_revenue_mindmap_dot()
-    st.graphviz(graph_dot_string)
+    st.graphviz_chart(graph_dot_string)
 elif selected_option == "Cost structure":
     st.info("Generate a mindmap for Cost Structure here.")
     # Add your mindmap generation code for
