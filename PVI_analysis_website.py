@@ -18,6 +18,7 @@ st.write(f"You selected: **{selected_analysis_type}**")
 
 # Define the structured data for the revenue notes
 revenue_structure_data = {
+
     "Doanh thu từ hoạt động kinh doanh bảo hiểm": {
         "Phí bảo hiểm gốc": [
             "**Số liệu chính xác:** Doanh thu phí bảo hiểm gốc năm 2024 đạt 13.000 tỷ đồng.",
@@ -49,9 +50,7 @@ revenue_structure_data = {
             "Tăng trưởng từ khai thác nhận tái bảo hiểm quốc tế",
             "Doanh thu bảo hiểm gốc: 13.000 tỷ đồng"
         ]
-    },
-# ...existing code...
-        ]
+
     },
     "Doanh thu từ hoạt động tài chính": {
         "Lãi đầu tư trái phiếu": [],
