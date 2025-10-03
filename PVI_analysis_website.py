@@ -54,7 +54,7 @@ revenue_structure_data = {
     }
 }
 
-if selected_analysis_type == "Company Revenue Structure":
+if selected_analysis_type == "Revenue Structure":
 
     # Use st.sidebar.radio for main categories (acting as tabs)
     main_category_options = list(revenue_structure_data.keys())
